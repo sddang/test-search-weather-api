@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="API" verbose="1" preserve-order="true" data-provider-thread-count="20" parallel="tests" thread-count="2">
+    <listeners>
+        <listener class-name="shane.testing.hook.AnnotationTransformer"/>
+    </listeners>
+    <test verbose="1"
+          name="Automation API Test"
+          preserve-order="true">
+        <parameter name="parallel" value="false"/>
+        <classes>
+            <class name="shane.testing.DebugRunner">
+            </class>
+        </classes>
+    </test>
+</suite>
